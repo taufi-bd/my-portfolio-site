@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{w2l6:function(e,a,t){"use strict";t.r(a);var n=t("q1tI"),r=t.n(n),l=t("7oih"),c=t("Wbzz"),s=t("EYWl");a.default=()=>r.a.createElement(l.a,null,r.a.createElement(s.a,{title:"404",description:"This is the error page"}),r.a.createElement("main",{className:"error-page"},r.a.createElement("div",{className:"error-container"},r.a.createElement("h1",null,"oops it's a dead end"),r.a.createElement(c.a,{to:"/",className:"btn"},"Back Home"))))}}]);
+//# sourceMappingURL=component---src-pages-404-js-db85b94d6374ebbe0d44.js.map
