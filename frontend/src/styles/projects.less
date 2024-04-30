@@ -1,0 +1,45 @@
+.projects {
+    display: grid;
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+
+    &__inner-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    &__button {
+        justify-self: flex-end;
+        color: var(--black-primary);
+        font-family: var(--ff-tertiary);
+        font-weight: 500;
+        font-size: 16px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-top: 30px;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            background-color: transparent;
+            width: 100%;
+            height: 2px;
+            top: 24px;
+            transition: background-color .3s linear;
+        }
+
+        & span {
+            margin-right: 5px;
+        }
+
+        &:hover {
+            &:before {
+                background-color: var(--blue-primary);
+            }
+        }
+    }
+}

@@ -1,0 +1,143 @@
+.experience {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    margin-bottom: 48px;
+    margin-top: 48px;
+
+    &__title {
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    &__job-item {
+        margin-bottom: 10px;
+        background-color: var(--color-primary-025);
+        border-radius: 10px;
+        padding: 20px;
+
+        &:hover {
+            background-color: var(--color-primary-05);
+        }
+
+        &__button {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            background-color: transparent;
+            
+
+            &__content {
+                & * {
+                    margin: 0;
+                    color: var(--text-primary);
+                }
+
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                &__company-name, &__position, &__date {
+                    text-align: left;
+                }
+
+                &__company-name {
+                    font-family: var(--ff-quinary);
+                    letter-spacing: 0.4px;
+                    color: var(--text-primary);
+                    font-size: 16px;
+                }
+
+                &__position {
+                    font-family: var(--ff-tertiary);
+                    color: var(--text-secondary);
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+
+                &__date {
+                    font-family: var(--ff-quaternary);
+                    color: var(--text-secondary);
+                    font-size: 12px;
+                }
+            }
+
+            &__icon {
+                color: var(--text-tertiary);
+                display: flex;
+                font-size: 2rem;
+                margin-right: 10px;
+                transition: transform .3s linear;
+
+                &.expanded {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &__description {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height .3s linear;
+            
+            &__inner-wrapper {
+                padding-top: 20px;
+            }
+
+            &__item {
+                display: flex;
+                gap: 10px;
+
+                &:last-child p {
+                    margin-bottom: 0;
+                }
+
+                & p {
+                    flex: 0 1 100%;
+                    font-family: var(--ff-quaternary);
+                    color: var(--text-secondary);
+                    font-weight: 400;
+                    font-size: 14px;
+                    margin-bottom: 12px;
+                }
+
+                &__icon {
+                    color: var(--text-tertiary);
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .experience {
+        margin-bottom: 64px;
+
+        &__job-item__button__content {
+            &__company-name {
+                font-size: 17px;
+            }
+
+            &__position {
+                font-size: 15px;
+            }
+
+            &__date {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    .experience {
+        margin-bottom: 80px;
+    }
+}

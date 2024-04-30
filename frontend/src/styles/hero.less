@@ -1,0 +1,183 @@
+.hero {
+    position: relative;
+    margin-top: calc(48px + 80px);
+    overflow: hidden;
+    
+    &__cloud {
+        display: none;
+        list-style: none;
+        padding-left: 0;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        line-height: 2.2rem;
+        overflow: hidden;
+
+        & span {
+            color: var(--text-primary);
+            display: block;
+            font-size: 2rem;
+            padding: 0.125rem 0.25rem;
+            text-decoration: none;
+            position: relative;
+            --size: 4;
+             font-size: calc(var(--size) * 0.25rem + 0.1rem);
+             opacity: calc((15 - (9 - var(--size))) / 15); 
+        }
+
+        & span[data-weight="1"] { --size: 1; }
+        & span[data-weight="2"] { --size: 2; }
+        & span[data-weight="3"] { --size: 3; }
+        & span[data-weight="4"] { --size: 4; }
+        & span[data-weight="5"] { --size: 5; }
+        & span[data-weight="6"] { --size: 6; }
+        & span[data-weight="7"] { --size: 7; }
+        & span[data-weight="8"] { --size: 8; }
+        & span[data-weight="9"] { --size: 9; }
+      }
+    
+      &__container {
+        height: 100%;
+        display: grid;
+        align-items: center;
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1170px;
+      }
+
+      &__info h3,
+      &__info h4 {
+        text-transform: none;
+      }
+
+      &__info {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        &__title {
+          font-family: var(--ff-quaternary);
+          font-size: 16px;
+          line-height: 130%;
+          margin-bottom: 15px;
+          letter-spacing: .5px;
+          font-weight: 400;
+        }
+
+        &__name {
+          font-family: var(--ff-primary);
+          color: var(--blue-primary);
+          font-size: 48px;
+          letter-spacing: 0px;
+          line-height: 100%;
+          margin-bottom: 20px;
+        }
+
+        &__subtitle {
+          font-family: var(--ff-quaternary);
+          font-size: 16px;
+          letter-spacing: .5px;
+          font-weight: 400;
+        }
+      }
+
+      &__info h4 {
+        color: var(--black-primary);
+      }
+
+      &__contact-button {
+        font-family: var(--ff-tertiary);
+        font-size: 20px;
+        margin-top: 20px;
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: var(--black-primary);
+        color: var(--white-primary);
+        border: 1px solid var(--black-primary);
+        transition: var(--transition);
+
+        &:hover {
+            background-color: var(--white-primary);
+            color: var(--black-primary);
+            border: 1px solid var(--black-primary);
+        }
+      }
+
+      & .social-links .social-link:hover{
+        color: var(--blue-primary);
+      }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .hero {
+      height: calc(100vh - 80px);
+      margin-top: 0;
+
+      &__container {
+        grid-template-columns: repeat(12, 1fr);
+      }
+
+      &__info {
+          justify-content: flex-start;
+          text-align: left;
+            grid-row: 1/1;
+            grid-column: 1 / span 7;
+
+            &__title {
+              font-size: 16px;
+              margin-bottom: 15px;
+            }
+    
+            &__name {
+              font-size: 54px;
+              letter-spacing: 0px;
+              line-height: 100%;
+              margin-bottom: 20px;
+            }
+    
+            &__subtitle {
+              font-size: 16px;
+            }
+      }
+
+      &__cloud {
+        display: flex;
+        grid-row: 1/1;
+        grid-column: 8 / span 12;
+
+        
+      }
+    }
+  }
+  @media screen and (min-width: 1170px) {
+    .hero {
+      
+
+        &__info {
+            grid-column: 1 / span 6;
+      }
+
+      &__cloud {
+        grid-column: 7 / span 12;
+        line-height: 2.5rem;
+        & span {
+          font-size: calc(var(--size) * 0.25rem + 0.5rem);
+       }
+      }
+
+      & h4 {
+        font-size: 1rem;
+        line-height: 1;
+      }
+    }
+
+  
+    .hero-info {
+      grid-column: 1 / span 8;
+    }
+  
+    .hero h4 {
+      line-height: 1;
+    }
+  }

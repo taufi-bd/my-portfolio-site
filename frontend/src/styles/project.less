@@ -1,0 +1,69 @@
+.project {
+    background-color: var(--color-primary-05);
+    border-radius: 5px 5px 0 0;
+
+    &__card {
+        height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        box-shadow: 2px 2px 4px rgba(#222, .1);
+
+        &__image {
+            height: 160px;
+            width: auto;
+            object-fit: cover;
+            overflow: hidden;
+            border-radius: 5px 5px 0 0;
+        }
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 10px;
+            height: 100%;
+
+            &__title {
+                font-size: 14px;
+                color: var(--text-primary);
+                font-family: var(--ff-quinary);
+                margin-bottom: 20px;
+            }
+
+            &__stacks {
+                & span {
+                    display: inline-flex;
+                    background: var(--color-primary-10);
+                    font-family: var(--ff-quaternary);
+                    color: var(--text-primary);
+                    margin-right: 5px;
+                    padding: 2.5px 5px;
+                    border-radius: 5px;
+                    letter-spacing: 1px;
+                    font-size: 10px;
+                }
+            }
+
+           
+            
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px 20px 10px;
+
+            & a {
+                color: var(--text-primary);
+                padding: 4px 12px;
+                border-radius: 10px;
+                border: 1px solid var(--blue-primary);
+                transition: all .3s linear;
+                cursor: pointer;
+                
+                &:hover {
+                    background-color: var(--blue-primary);
+                    color: var(--white-primary);
+                }
+            }
+        }
+    }
+}

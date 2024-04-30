@@ -1,0 +1,53 @@
+:root {
+    --color-primary-025: rgba(#222222, 0.025);
+    --color-primary-05: rgba(#222222, 0.05);
+    --color-primary-10: rgba(#222222, 0.1);
+
+    --white-primary: #ffffff;
+    --black-primary: #0A192F;
+    
+    --gray-primary: #e5e5e5;
+
+    --text-primary: #172A45;
+    --text-secondary: #333F58;
+    --text-tertiary: #606A86;
+
+    --blue-primary: #1E77E2;
+  
+    --ff-primary: "Tiempos Headline", sans-serif;
+    --ff-secondary: "Tiempos Headline Light", sans-serif;
+    --ff-tertiary: "SF Pro Text", sans-serif;
+    --ff-quaternary: "SF Pro Text Light", sans-serif;
+    --ff-quinary: "SF Pro Text Semibold", sans-serif;
+
+  
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 700px;
+  }
+
+  html.dark {
+    --white-primary: #0A192F;
+    --black-primary: #F8F8F8;
+    --text-primary: #F8F8F8;
+    --text-secondary: #F8F8F8;
+    --color-primary-025: rgba(#F8F8F8, 0.025);
+    --color-primary-05: rgba(#F8F8F8, 0.05);
+    --color-primary-10: rgba(#F8F8F8, 0.1);
+  } 
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --white-primary: #0A192F;
+    --black-primary: #F8F8F8;
+    --text-primary: #F8F8F8;
+    --text-secondary: #F8F8F8;
+    --color-primary-025: rgba(#F8F8F8, 0.025);
+    --color-primary-05: rgba(#F8F8F8, 0.05);
+    --color-primary-10: rgba(#F8F8F8, 0.1);
+    }
+  } 
